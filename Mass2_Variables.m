@@ -19,10 +19,10 @@ times = dt(0:3.6576:trackLength); %3.6576m = 12ft
 
 A(1,:)=[0,(r-y),0];
 for j=2:length(times)
-    y1=y*rand(1,1);
-    A = [A;times(j)-dt2,r-y1,0];
+   % y1=y*rand(1,1);
+    A = [A;times(j)-dt2,r-y,0];
     %A = [A;verticalHeightD(a,r,y,times(j),dt2)];
-    A = [A;verticalHeight(a,r,y1,times(j),dt2)];
+    A = [A;verticalHeight(a,r,y,times(j),dt2)];
     %A = [A;times(j)+A(end,3),r-y,0];
 end
 
